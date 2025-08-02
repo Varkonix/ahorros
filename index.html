@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiAhorro - Tus Metas de Ahorro</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#4CAF50">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header con botón de configuración -->
+        <header class="app-header">
+            <div class="header-left">
+                <h1>💰 Mis Ahorros</h1>
+            </div>
+            <button class="settings-btn" onclick="openSettings()">⚙️</button>
+        </header>
+
+        <!-- Totales por moneda con scroll horizontal -->
+        <section class="totals-section">
+            <h2>Total Ahorrado</h2>
+            <div class="currencies-container">
+                <div id="currencies-scroll" class="currencies-scroll">
+                    <div class="empty-totals">
+                        <p>Crea tu primera meta para ver tus ahorros</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Metas de ahorro -->
+        <section class="goals-section">
+            <div class="section-header">
+                <h2>Mis Metas</h2>
+                <button class="add-goal-btn" onclick="openAddGoal()">+</button>
+            </div>
+            <div id="goals-container" class="goals-container">
+                <div class="empty-state">
+                    <p>¡Comienza tu aventura de ahorro!</p>
+                    <p>Toca el botón + para crear tu primera meta</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Modal de configuración -->
+    <div id="settings-modal" class="modal">
+        <div class="modal-content settings-modal">
+            <div class="modal-header">
+                <button class="back-btn" onclick="closeSettings()">←</button>
+                <h3>Configuración</h3>
+            </div>
+            <div class="modal-body">
+                <div class="settings-section">
+                    <h4>Idioma</h4>
+                    <select id="language-select">
+                        <option value="es">🇪🇸 Español</option>
+                        <option value="en">🇺🇸 English</option>
+                        <option value="pt">🇧🇷 Português</option>
+                    </select>
+                </div>
+                
+                <div class="settings-section">
+                    <h4>Moneda Principal</h4>
+                    <select id="currency-select">
+                        <option value="USD">🇺🇸 USD - Dólar</option>
+                        <option value="EUR">🇪🇺 EUR - Euro</option>
+                        <option value="COP">🇨🇴 COP - Peso Colombiano</option>
+                        <option value="BRL">🇧🇷 BRL - Real</option>
+                        <option value="MXN">🇲🇽 MXN - Peso Mexicano</option>
+                        <option value="ARS">🇦🇷 ARS - Peso Argentino</option>
+                        <option value="CLP">🇨🇱 CLP - Peso Chileno</option>
+                        <option value="PEN">🇵🇪 PEN - Sol Peruano</option>
+                    </select>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-secondary" onclick="closeSettings()">Cancelar</button>
+                <button class="btn-primary" onclick="saveSettings()">Guardar Cambios</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para agregar meta -->
+    <div id="add-goal-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="back-btn" onclick="closeAddGoal()">←</button>
+                <h3>Nueva Meta</h3>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="goal-name">Nombre de la meta *</label>
+                    <input type="text" id="goal-name" placeholder="Ej: Vacaciones, Auto nuevo..." required>
+                </div>
+                <div class="form-group">
+                    <label for="goal-amount">Cantidad objetivo (opcional)</label>
+                    <input type="number" id="goal-amount" min="0" step="0.01" placeholder="0.00">
+                </div>
+                <div class="form-group">
+                    <label for="goal-currency">Moneda</label>
+                    <select id="goal-currency"></select>
+                </div>
+                <div class="form-group">
+                    <label>Imagen (opcional)</label>
+                    <div id="image-preview" class="image-upload" onclick="document.getElementById('goal-image').click()">
+                        <div class="upload-placeholder">
+                            <span class="upload-icon">📷</span>
+                            <span>Toca para agregar imagen</span>
+                        </div>
+                    </div>
+                    <input type="file" id="goal-image" accept="image/*" style="display: none" onchange="handleImageUpload(event)">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-secondary" onclick="closeAddGoal()">Cancelar</button>
+                <button class="btn-primary" onclick="saveGoal()">Guardar Meta</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para detalles de meta -->
+    <div id="goal-detail-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="back-btn" onclick="closeGoalDetail()">←</button>
+                <h3>Detalle de Meta</h3>
+                <button class="delete-btn" onclick="confirmDeleteGoal()">🗑️</button>
+            </div>
+            <div class="modal-body">
+                <div class="goal-detail-header">
+                    <div id="detail-goal-image" class="goal-detail-image"></div>
+                    <h2 id="detail-goal-name"></h2>
+                </div>
+                <div class="goal-amounts">
+                    <div class="amount-box">
+                        <span class="amount-label">Ahorrado</span>
+                        <span id="detail-saved-amount" class="amount-value"></span>
+                    </div>
+                    <div class="amount-box">
+                        <span class="amount-label">Objetivo</span>
+                        <span id="detail-target-amount" class="amount-value"></span>
+                    </div>
+                </div>
+                <div class="progress-container">
+                    <div class="progress-bar">
+                        <div id="detail-progress-fill" class="progress-fill"></div>
+                    </div>
+                    <div class="progress-info">
+                        <span id="detail-progress-percentage"></span>
+                        <span id="detail-remaining-amount"></span>
+                    </div>
+                </div>
+                <div class="action-buttons">
+                    <button onclick="showAddMoney()" class="btn-action btn-add">Agregar</button>
+                    <button onclick="showRemoveMoney()" class="btn-action btn-remove">Quitar</button>
+                    <button onclick="openEditGoal()" class="btn-action btn-edit">Editar</button>
+                </div>
+                <div class="transactions-section">
+                    <h4>Historial de Transacciones</h4>
+                    <div id="transactions-list" class="transactions-list"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para agregar/quitar dinero -->
+    <div id="money-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="back-btn" onclick="closeMoneyModal()">←</button>
+                <h3 id="money-modal-title">Agregar Dinero</h3>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="money-amount">Cantidad</label>
+                    <input type="number" id="money-amount" min="0" step="0.01" placeholder="0.00">
+                </div>
+                <div class="form-group">
+                    <label for="money-note">Nota (opcional)</label>
+                    <input type="text" id="money-note" placeholder="Ej: Ahorro del mes, Regalo...">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-secondary" onclick="closeMoneyModal()">Cancelar</button>
+                <button class="btn-primary" onclick="saveMoneyTransaction()">Confirmar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para editar meta -->
+    <div id="edit-goal-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="back-btn" onclick="closeEditGoal()">←</button>
+                <h3>Editar Meta</h3>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="edit-goal-name">Nombre de la meta</label>
+                    <input type="text" id="edit-goal-name">
+                </div>
+                <div class="form-group">
+                    <label for="edit-goal-amount">Cantidad objetivo</label>
+                    <input type="number" id="edit-goal-amount" min="0" step="0.01">
+                </div>
+                <div class="form-group">
+                    <label for="edit-goal-currency">Moneda</label>
+                    <select id="edit-goal-currency"></select>
+                </div>
+                <div class="form-group">
+                    <label>Imagen</label>
+                    <div id="edit-image-preview" class="image-upload" onclick="document.getElementById('edit-goal-image').click()">
+                        <div class="upload-placeholder">
+                            <span class="upload-icon">📷</span>
+                            <span>Toca para cambiar imagen</span>
+                        </div>
+                    </div>
+                    <input type="file" id="edit-goal-image" accept="image/*" style="display: none" onchange="handleEditImageUpload(event)">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-secondary" onclick="closeEditGoal()">Cancelar</button>
+                <button class="btn-primary" onclick="saveEditGoal()">Guardar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de confirmación para eliminar -->
+    <div id="confirm-delete-modal" class="modal">
+        <div class="modal-content confirm-modal">
+            <div class="modal-header">
+                <h3>Confirmar Eliminación</h3>
+            </div>
+            <div class="modal-body">
+                <p>¿Estás seguro de que quieres eliminar esta meta?</p>
+                <p><strong>Esta acción no se puede deshacer.</strong></p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-secondary" onclick="closeConfirmDelete()">Cancelar</button>
+                <button class="btn-danger" onclick="deleteGoal()">Eliminar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
