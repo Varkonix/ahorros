@@ -13,14 +13,16 @@ const translations = {
     es: {
         // Textos principales
         'app-title': 'MiAhorro - Tus Metas de Ahorro',
-        'total-savings': '💰 total ahorros',
+        'total-savings': '💰 ahorros totales',
         'total-saved': 'Total Ahorrado',
         'my-goals': 'Mis Metas',
         'start-saving-adventure': '¡Comienza tu aventura de ahorro!',
         'tap-plus-button': 'Toca el botón + para crear tu primera meta',
-        'create-first-goal': 'Crea tu primera meta para ver tus ahorros',
+        'create-first-goal': 'Crea tu primera meta para visualizar tus ahorros',
         'no-limit': 'Sin límite',
         'goal-reached': '¡Meta alcanzada!',
+        'export': 'Exportar',
+        'import': 'Importar',
         
         // Configuración
         'settings': 'Configuración',
@@ -28,34 +30,34 @@ const translations = {
         'main-currency': 'Moneda Principal',
         'cancel': 'Cancelar',
         'save-changes': 'Guardar Cambios',
-        'settings-saved': '¡Configuración guardada!',
+        'settings-saved': '¡Configuración guardada exitosamente!',
         
         // Nueva meta
         'new-goal': 'Nueva Meta',
         'goal-name': 'Nombre de la meta *',
-        'goal-name-placeholder': 'Ej: Vacaciones, Auto nuevo...',
+        'goal-name-placeholder': 'Ej: Vacaciones, Auto nuevo, Casa...',
         'target-amount': 'Cantidad objetivo (opcional)',
         'currency': 'Moneda',
         'image-optional': 'Imagen (opcional)',
-        'tap-add-image': 'Toca para agregar imagen',
+        'tap-add-image': 'Toca para agregar una imagen',
         'save-goal': 'Guardar Meta',
-        'enter-goal-name': 'Por favor ingresa un nombre para la meta',
+        'enter-goal-name': 'Por favor, ingresa un nombre para la meta',
         
         // Detalle de meta
-        'goal-detail': 'Detalle de Meta',
+        'goal-detail': 'Detalle de la Meta',
         'saved': 'Ahorrado',
         'target': 'Objetivo',
         'add': 'Agregar',
-        'remove': 'Quitar',
+        'remove': 'Retirar',
         'edit': 'Editar',
-        'transaction-history': 'Historial de Transacciones',
+        'transaction-history': 'Historial de Movimientos',
         
         // Agregar/Quitar dinero
         'add-money': 'Agregar Dinero',
-        'remove-money': 'Quitar Dinero',
+        'remove-money': 'Retirar Dinero',
         'amount': 'Cantidad',
         'note-optional': 'Nota (opcional)',
-        'note-placeholder': 'Ej: Ahorro del mes, Regalo...',
+        'note-placeholder': 'Ej: Ahorro mensual, Regalo, Bono...',
         'confirm': 'Confirmar',
         
         // Editar meta
@@ -63,12 +65,12 @@ const translations = {
         'goal-name-edit': 'Nombre de la meta',
         'target-amount-edit': 'Cantidad objetivo',
         'image': 'Imagen',
-        'tap-change-image': 'Toca para cambiar imagen',
+        'tap-change-image': 'Toca para cambiar la imagen',
         'save': 'Guardar',
         
         // Eliminar
         'confirm-delete': 'Confirmar Eliminación',
-        'delete-confirmation': '¿Estás seguro de que quieres eliminar esta meta?',
+        'delete-confirmation': '¿Estás seguro de que deseas eliminar esta meta?',
         'action-undoable': 'Esta acción no se puede deshacer.',
         'delete': 'Eliminar',
         
@@ -84,11 +86,13 @@ const translations = {
         'total-savings': '💰 total savings',
         'total-saved': 'Total Saved',
         'my-goals': 'My Goals',
-        'start-saving-adventure': 'Start your savings adventure!',
+        'start-saving-adventure': 'Start your savings journey!',
         'tap-plus-button': 'Tap the + button to create your first goal',
-        'create-first-goal': 'Create your first goal to see your savings',
+        'create-first-goal': 'Create your first goal to track your savings',
         'no-limit': 'No limit',
-        'goal-reached': 'Goal reached!',
+        'goal-reached': 'Goal achieved!',
+        'export': 'Export',
+        'import': 'Import',
         
         // Settings
         'settings': 'Settings',
@@ -96,21 +100,21 @@ const translations = {
         'main-currency': 'Main Currency',
         'cancel': 'Cancel',
         'save-changes': 'Save Changes',
-        'settings-saved': 'Settings saved!',
+        'settings-saved': 'Settings saved successfully!',
         
         // New goal
         'new-goal': 'New Goal',
         'goal-name': 'Goal name *',
-        'goal-name-placeholder': 'Ex: Vacation, New car...',
+        'goal-name-placeholder': 'Ex: Vacation, New car, House...',
         'target-amount': 'Target amount (optional)',
         'currency': 'Currency',
         'image-optional': 'Image (optional)',
-        'tap-add-image': 'Tap to add image',
+        'tap-add-image': 'Tap to add an image',
         'save-goal': 'Save Goal',
         'enter-goal-name': 'Please enter a goal name',
         
         // Goal detail
-        'goal-detail': 'Goal Detail',
+        'goal-detail': 'Goal Details',
         'saved': 'Saved',
         'target': 'Target',
         'add': 'Add',
@@ -123,7 +127,7 @@ const translations = {
         'remove-money': 'Remove Money',
         'amount': 'Amount',
         'note-optional': 'Note (optional)',
-        'note-placeholder': 'Ex: Monthly savings, Gift...',
+        'note-placeholder': 'Ex: Monthly savings, Gift, Bonus...',
         'confirm': 'Confirm',
         
         // Edit goal
@@ -148,15 +152,17 @@ const translations = {
     
     pt: {
         // Textos principais
-        'app-title': 'MinhaEconomia - Suas Metas de Economia',
-        'total-savings': '💰 total economias',
-        'total-saved': 'Total Economizado',
+        'app-title': 'MinhasPoupanças - Suas Metas de Poupança',
+        'total-savings': '💰 poupanças totais',
+        'total-saved': 'Total Poupado',
         'my-goals': 'Minhas Metas',
-        'start-saving-adventure': 'Comece sua aventura de economia!',
+        'start-saving-adventure': 'Comece sua jornada de poupança!',
         'tap-plus-button': 'Toque no botão + para criar sua primeira meta',
-        'create-first-goal': 'Crie sua primeira meta para ver suas economias',
+        'create-first-goal': 'Crie sua primeira meta para acompanhar suas poupanças',
         'no-limit': 'Sem limite',
         'goal-reached': 'Meta alcançada!',
+        'export': 'Exportar',
+        'import': 'Importar',
         
         // Configurações
         'settings': 'Configurações',
@@ -164,22 +170,22 @@ const translations = {
         'main-currency': 'Moeda Principal',
         'cancel': 'Cancelar',
         'save-changes': 'Salvar Alterações',
-        'settings-saved': 'Configurações salvas!',
+        'settings-saved': 'Configurações salvas com sucesso!',
         
         // Nova meta
         'new-goal': 'Nova Meta',
         'goal-name': 'Nome da meta *',
-        'goal-name-placeholder': 'Ex: Férias, Carro novo...',
+        'goal-name-placeholder': 'Ex: Férias, Carro novo, Casa...',
         'target-amount': 'Valor objetivo (opcional)',
         'currency': 'Moeda',
         'image-optional': 'Imagem (opcional)',
-        'tap-add-image': 'Toque para adicionar imagem',
+        'tap-add-image': 'Toque para adicionar uma imagem',
         'save-goal': 'Salvar Meta',
         'enter-goal-name': 'Por favor, insira um nome para a meta',
         
         // Detalhe da meta
-        'goal-detail': 'Detalhe da Meta',
-        'saved': 'Economizado',
+        'goal-detail': 'Detalhes da Meta',
+        'saved': 'Poupado',
         'target': 'Objetivo',
         'add': 'Adicionar',
         'remove': 'Remover',
@@ -191,7 +197,7 @@ const translations = {
         'remove-money': 'Remover Dinheiro',
         'amount': 'Valor',
         'note-optional': 'Nota (opcional)',
-        'note-placeholder': 'Ex: Economia do mês, Presente...',
+        'note-placeholder': 'Ex: Poupança mensal, Presente, Bônus...',
         'confirm': 'Confirmar',
         
         // Editar meta
@@ -199,7 +205,7 @@ const translations = {
         'goal-name-edit': 'Nome da meta',
         'target-amount-edit': 'Valor objetivo',
         'image': 'Imagem',
-        'tap-change-image': 'Toque para alterar imagem',
+        'tap-change-image': 'Toque para alterar a imagem',
         'save': 'Salvar',
         
         // Excluir
@@ -212,6 +218,76 @@ const translations = {
         'added': 'Adicionado',
         'removed': 'Removido',
         'remaining': 'Restam'
+    },
+    
+    que: {
+        // Textos principales
+        'app-title': 'Qolqe Waqaychay - Qampa Metakuna',
+        'total-savings': '💰 llapan qolqe waqaychasqa',
+        'total-saved': 'Llapan Waqaychasqa',
+        'my-goals': 'Ñuqapa Metakuna',
+        'start-saving-adventure': '¡Qolqe waqaychay puriyta qallariy!',
+        'tap-plus-button': '+ botonta ñit\'iy ñawpaq metaykita ruwanapaq',
+        'create-first-goal': 'Ñawpaq metaykita ruway qolqeykita qhawanapaq',
+        'no-limit': 'Mana sayay',
+        'goal-reached': '¡Meta chayasqa!',
+        'export': 'Lluqsichiy',
+        'import': 'Yaykuchiy',
+        
+        // Configuración
+        'settings': 'Allichay',
+        'language': 'Simi',
+        'main-currency': 'Hatun Qolqe',
+        'cancel': 'Saqiy',
+        'save-changes': 'Tikaykunata waqaychay',
+        'settings-saved': '¡Allichay allinta waqaychasqa!',
+        
+        // Nueva meta
+        'new-goal': 'Musuq Meta',
+        'goal-name': 'Metapa sutin *',
+        'goal-name-placeholder': 'Kayhinata: Samay, Musuq auto, Wasi...',
+        'target-amount': 'Munasqa qolqe (munasqanman hina)',
+        'currency': 'Qolqe',
+        'image-optional': 'Siq\'i (munasqanman hina)',
+        'tap-add-image': 'Ñit\'iy huk siq\'ita yapanapaq',
+        'save-goal': 'Metata waqaychay',
+        'enter-goal-name': 'Ama hina kay, metapa sutinta qillqay',
+        
+        // Detalle de meta
+        'goal-detail': 'Metapa Willakuyninkunata',
+        'saved': 'Waqaychasqa',
+        'target': 'Meta',
+        'add': 'Yapay',
+        'remove': 'Hurquy',
+        'edit': 'Allichay',
+        'transaction-history': 'Qolqe Ruraykunapa Willakuynin',
+        
+        // Agregar/Quitar dinero
+        'add-money': 'Qolqeta yapay',
+        'remove-money': 'Qolqeta hurquy',
+        'amount': 'Qolqe',
+        'note-optional': 'Qillqasqa (munasqanman hina)',
+        'note-placeholder': 'Kayhinata: Killapa qolqen, Sipiy, Yapay...',
+        'confirm': 'Takyachiy',
+        
+        // Editar meta
+        'edit-goal': 'Metata allichay',
+        'goal-name-edit': 'Metapa sutin',
+        'target-amount-edit': 'Munasqa qolqe',
+        'image': 'Siq\'i',
+        'tap-change-image': 'Ñit\'iy siq\'ita tikanaykipaq',
+        'save': 'Waqaychay',
+        
+        // Eliminar
+        'confirm-delete': 'Qichuy takyachiy',
+        'delete-confirmation': '¿Chiqachu kay metata qichuyta munankichu?',
+        'action-undoable': 'Kay rurayqa manam kutichikuyta atinchu.',
+        'delete': 'Qichuy',
+        
+        // Transacciones
+        'added': 'Yapasqa',
+        'removed': 'Hurqusqa',
+        'remaining': 'Faltasqa'
     }
 };
 
@@ -226,6 +302,133 @@ const currencyInfo = {
     CLP: { name: 'Peso Chileno', flag: '🇨🇱' },
     PEN: { name: 'Sol Peruano', flag: '🇵🇪' }
 };
+
+// ===== FUNCIONES DE FORMATEO DE NÚMEROS =====
+function formatNumberInput(value) {
+    // Si el valor está vacío, retornarlo tal como está
+    if (!value || value === '') return value;
+    
+    // Remover caracteres no numéricos excepto punto decimal
+    const cleanValue = value.replace(/[^\d.]/g, '');
+    
+    // Si después de limpiar no hay nada, retornar vacío
+    if (!cleanValue) return '';
+    
+    // Separar parte entera y decimal
+    const parts = cleanValue.split('.');
+    let integerPart = parts[0];
+    const decimalPart = parts[1];
+    
+    // Solo formatear si hay al menos un dígito
+    if (!integerPart) return cleanValue;
+    
+    // Formatear parte entera con separadores de miles
+    if (integerPart.length > 3) {
+        integerPart = integerPart.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+    }
+    
+    // Reconstruir el número
+    let formattedValue = integerPart;
+    if (decimalPart !== undefined) {
+        formattedValue += '.' + decimalPart;
+    }
+    
+    return formattedValue;
+}
+
+function parseFormattedNumber(value) {
+    // Remover separadores de miles y convertir a número
+    if (!value || value === '') return 0;
+    return parseFloat(value.replace(/,/g, '')) || 0;
+}
+
+function setupNumberFormatting(inputId) {
+    const input = document.getElementById(inputId);
+    if (!input) return;
+    
+    // Cambiar el tipo de input a text para permitir formateo
+    input.type = 'text';
+    input.inputMode = 'decimal'; // Mantener el teclado numérico en móviles
+    
+    // Remover event listeners previos si existen
+    input.removeEventListener('input', input._formatHandler);
+    input.removeEventListener('keydown', input._keydownHandler);
+    input.removeEventListener('blur', input._blurHandler);
+    
+    // Handler para keydown - permitir solo números, punto decimal y teclas especiales
+    input._keydownHandler = function(e) {
+        const allowedKeys = [
+            'Backspace', 'Delete', 'Tab', 'Escape', 'Enter',
+            'ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown',
+            'Home', 'End', 'Period'
+        ];
+        
+        // Permitir Ctrl+A, Ctrl+C, Ctrl+V, Ctrl+X
+        if (e.ctrlKey && ['a', 'c', 'v', 'x'].includes(e.key.toLowerCase())) {
+            return;
+        }
+        
+        // Permitir teclas especiales
+        if (allowedKeys.includes(e.key)) {
+            return;
+        }
+        
+        // Permitir números
+        if (e.key >= '0' && e.key <= '9') {
+            return;
+        }
+        
+        // Permitir punto decimal solo si no hay uno ya
+        if (e.key === '.' && !e.target.value.includes('.')) {
+            return;
+        }
+        
+        // Bloquear todo lo demás
+        e.preventDefault();
+    };
+    
+    // Handler para input - formatear mientras se escribe
+    input._formatHandler = function(e) {
+        const cursorPosition = e.target.selectionStart;
+        const oldValue = e.target.value;
+        const newValue = formatNumberInput(oldValue);
+        
+        if (newValue !== oldValue) {
+            e.target.value = newValue;
+            
+            // Calcular nueva posición del cursor
+            let newCursorPosition = cursorPosition;
+            const oldCommas = (oldValue.match(/,/g) || []).length;
+            const newCommas = (newValue.match(/,/g) || []).length;
+            const commasDiff = newCommas - oldCommas;
+            
+            if (commasDiff !== 0) {
+                newCursorPosition = cursorPosition + commasDiff;
+            }
+            
+            // Asegurar que el cursor esté en una posición válida
+            newCursorPosition = Math.max(0, Math.min(newCursorPosition, newValue.length));
+            
+            // Usar setTimeout para asegurar que el cursor se posicione correctamente
+            setTimeout(() => {
+                e.target.setSelectionRange(newCursorPosition, newCursorPosition);
+            }, 0);
+        }
+    };
+    
+    // Handler para blur - formatear al perder el foco
+    input._blurHandler = function(e) {
+        const value = e.target.value;
+        if (value && value.trim() !== '') {
+            e.target.value = formatNumberInput(value);
+        }
+    };
+    
+    // Agregar event listeners
+    input.addEventListener('keydown', input._keydownHandler);
+    input.addEventListener('input', input._formatHandler);
+    input.addEventListener('blur', input._blurHandler);
+}
 
 // ===== FUNCIONES DE ALMACENAMIENTO =====
 function saveToStorage() {
@@ -326,11 +529,22 @@ function resetAddGoalForm() {
     const amountInput = document.getElementById("goal-amount");
     const currencySelect = document.getElementById("goal-currency");
     const imageInput = document.getElementById("goal-image");
+    const imagePreview = document.getElementById("image-preview");
     
     if (nameInput) nameInput.value = "";
     if (amountInput) amountInput.value = "";
     if (currencySelect) currencySelect.value = settings.currency || "USD";
     if (imageInput) imageInput.value = "";
+    
+    // Limpiar preview de imagen
+    if (imagePreview) {
+        imagePreview.innerHTML = `
+            <div class="upload-placeholder">
+                <span class="upload-icon">📷</span>
+                <span>Toca para agregar imagen</span>
+            </div>
+        `;
+    }
 }
 
 function setupCurrencySelect() {
@@ -357,7 +571,7 @@ function saveGoal() {
     }
     
     const name = nameInput.value.trim();
-    const amount = parseFloat(amountInput.value) || 0;
+    const amount = parseFormattedNumber(amountInput.value) || 0;
     const currency = currencySelect.value;
     const imageFile = imageInput ? imageInput.files[0] : null;
     
@@ -418,17 +632,14 @@ function updateGoalsUI() {
         return;
     }
     
-    container.innerHTML = goals.map(goal => {
+    container.innerHTML = goals.map((goal, index) => {
         const progress = goal.targetAmount > 0 ? Math.min((goal.currentAmount / goal.targetAmount) * 100, 100) : 0;
         const remaining = goal.targetAmount > 0 ? Math.max(goal.targetAmount - goal.currentAmount, 0) : 0;
         const t = translations[settings.language] || translations.es;
         
         return `
-            <div class="goal-card" onclick="openGoalDetail(${goal.id})" ontouchstart="showDeleteOption(${goal.id}, event)" ontouchend="hideDeleteOption(${goal.id}, event)">
-                <button class="delete-btn" onclick="event.stopPropagation(); confirmDeleteGoal(${goal.id});" title="Eliminar meta">
-                    ✕
-                </button>
-                <div class="goal-content">
+            <div class="goal-card" data-goal-id="${goal.id}" data-index="${index}">
+                <div class="goal-content" onclick="openGoalDetail(${goal.id})">
                     ${goal.image ? `<img src="${goal.image}" alt="${goal.name}" class="goal-image">` : '<div class="goal-icon">💰</div>'}
                     <div class="goal-info">
                         <h3>${goal.name}</h3>
@@ -449,12 +660,19 @@ function updateGoalsUI() {
                         </div>
                     </div>
                 </div>
-                <div class="delete-overlay" onclick="event.stopPropagation(); confirmDeleteGoal(${goal.id});">
-                    <span>🗑️<br>${t['delete']}</span>
+                <div class="drag-handle" onclick="event.stopPropagation()">
+                    <div class="drag-lines">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
                 </div>
             </div>
         `;
     }).join('');
+    
+    // Agregar event listeners para drag and drop con long press
+    setupDragAndDrop();
     
     console.log(`✅ UI actualizada con ${goals.length} metas`);
 }
@@ -529,13 +747,22 @@ function openGoalDetail(goalId) {
     if (savedElement) savedElement.textContent = formatCurrency(goal.currentAmount, goal.currency);
     if (targetElement) targetElement.textContent = goal.targetAmount > 0 ? formatCurrency(goal.targetAmount, goal.currency) : t['no-limit'];
     
-    // Actualizar imagen
+    // Actualizar imagen con formato más ancho
     const imageContainer = document.getElementById("detail-goal-image");
     if (imageContainer) {
+        // Remover clase enlarged si existe
+        imageContainer.classList.remove('enlarged');
+        
         if (goal.image) {
             imageContainer.innerHTML = `<img src="${goal.image}" alt="${goal.name}">`;
+            
+            // Agregar evento de clic para zoom más ancho
+            imageContainer.onclick = function() {
+                imageContainer.classList.toggle('enlarged');
+            };
         } else {
             imageContainer.innerHTML = `<div class="goal-icon">💰</div>`;
+            imageContainer.onclick = null; // Remover evento si no hay imagen
         }
     }
     
@@ -613,7 +840,7 @@ function saveMoneyTransaction() {
     
     if (!amountInput) return;
     
-    const amount = parseFloat(amountInput.value);
+    const amount = parseFormattedNumber(amountInput.value);
     const note = noteInput ? noteInput.value.trim() : "";
     
     if (!amount || amount <= 0) {
@@ -667,6 +894,7 @@ function openEditGoal() {
     const nameInput = document.getElementById("edit-goal-name");
     const amountInput = document.getElementById("edit-goal-amount");
     const currencySelect = document.getElementById("edit-goal-currency");
+    const imagePreview = document.getElementById("edit-image-preview");
     
     if (nameInput) nameInput.value = goal.name;
     if (amountInput) amountInput.value = goal.targetAmount;
@@ -677,6 +905,20 @@ function openEditGoal() {
             `<option value="${code}">${info.flag} ${code} - ${info.name}</option>`
         ).join('');
         currencySelect.value = goal.currency;
+    }
+    
+    // Mostrar imagen actual o placeholder
+    if (imagePreview) {
+        if (goal.image) {
+            imagePreview.innerHTML = `<img src="${goal.image}" alt="${goal.name}" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">`;
+        } else {
+            imagePreview.innerHTML = `
+                <div class="upload-placeholder">
+                    <span class="upload-icon">📷</span>
+                    <span>Toca para cambiar imagen</span>
+                </div>
+            `;
+        }
     }
     
     const modal = document.getElementById("edit-goal-modal");
@@ -695,35 +937,53 @@ function saveEditGoal() {
     const nameInput = document.getElementById("edit-goal-name");
     const amountInput = document.getElementById("edit-goal-amount");
     const currencySelect = document.getElementById("edit-goal-currency");
+    const imageInput = document.getElementById("edit-goal-image");
     const t = translations[settings.language] || translations.es;
     
     if (!nameInput) return;
     
     const name = nameInput.value.trim();
-    const amount = amountInput ? parseFloat(amountInput.value) || 0 : 0;
+    const amount = amountInput ? parseFormattedNumber(amountInput.value) || 0 : 0;
     const currency = currencySelect ? currencySelect.value : goal.currency;
+    const imageFile = imageInput ? imageInput.files[0] : null;
     
     if (!name) {
         alert(t['enter-goal-name']);
         return;
     }
     
-    goal.name = name;
-    goal.targetAmount = amount;
-    goal.currency = currency;
-    
-    saveToStorage();
-    updateGoalsUI();
-    updateTotals();
-    closeEditGoal();
-    
-    // Actualizar modal de detalle si está abierto
-    const detailModal = document.getElementById("goal-detail-modal");
-    if (detailModal && detailModal.style.display === "flex") {
-        openGoalDetail(currentGoalId);
+    // Función para actualizar la meta
+    function updateGoal() {
+        goal.name = name;
+        goal.targetAmount = amount;
+        goal.currency = currency;
+        
+        saveToStorage();
+        updateGoalsUI();
+        updateTotals();
+        closeEditGoal();
+        
+        // Actualizar modal de detalle si está abierto
+        const detailModal = document.getElementById("goal-detail-modal");
+        if (detailModal && detailModal.style.display === "flex") {
+            openGoalDetail(currentGoalId);
+        }
+        
+        console.log('✅ Meta editada');
     }
     
-    console.log('✅ Meta editada');
+    // Si hay una nueva imagen, procesarla
+    if (imageFile) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            goal.image = e.target.result;
+            updateGoal();
+        };
+        reader.readAsDataURL(imageFile);
+    } else {
+        // Si no hay nueva imagen, mantener la actual
+        updateGoal();
+    }
 }
 
 // ===== FUNCIONES DE ELIMINACIÓN =====
@@ -845,6 +1105,20 @@ function handleImageUpload(event) {
     }
 }
 
+// Función para manejar carga de imagen en modal de edición
+function handleEditImageUpload(event) {
+    const file = event.target.files[0];
+    const preview = document.getElementById("edit-image-preview");
+    
+    if (file && preview) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            preview.innerHTML = `<img src="${e.target.result}" alt="Meta" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">`;
+        };
+        reader.readAsDataURL(file);
+    }
+}
+
 // ===== EVENTOS GLOBALES =====
 window.onclick = function(event) {
     const modals = document.querySelectorAll('.modal');
@@ -853,60 +1127,64 @@ window.onclick = function(event) {
             modal.style.display = "none";
         }
     });
-    
-    // Ocultar todas las opciones de eliminación al hacer clic en cualquier lugar
-    hideAllDeleteOptions();
 }
 
-// Funciones para mostrar/ocultar opciones de eliminación
-let deleteTimeout;
 
-function showDeleteOption(goalId, event) {
-    if (event) event.stopPropagation();
+
+// ===== FUNCIONES DE EXPORTACIÓN E IMPORTACIÓN =====
+function exportData() {
+    const data = {
+        goals: goals,
+        settings: settings,
+        exportDate: new Date().toISOString()
+    };
     
-    // Limpiar timeout anterior
-    if (deleteTimeout) {
-        clearTimeout(deleteTimeout);
-    }
+    const dataStr = JSON.stringify(data, null, 2);
+    const dataBlob = new Blob([dataStr], {type: 'application/json'});
     
-    // Mostrar después de un toque prolongado (500ms)
-    deleteTimeout = setTimeout(() => {
-        const goalCard = event.target.closest('.goal-card');
-        if (goalCard) {
-            goalCard.classList.add('show-delete');
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(dataBlob);
+    link.download = `metas-backup-${new Date().toISOString().split('T')[0]}.json`;
+    link.click();
+    
+    URL.revokeObjectURL(link.href);
+}
+
+function importData() {
+    const fileInput = document.getElementById('import-file');
+    fileInput.click();
+}
+
+function handleFileImport(event) {
+    const file = event.target.files[0];
+    if (!file) return;
+    
+    const reader = new FileReader();
+    reader.onload = function(e) {
+        try {
+            const data = JSON.parse(e.target.result);
             
-            // Vibración si está disponible
-            if (navigator.vibrate) {
-                navigator.vibrate(50);
+            if (data.goals && Array.isArray(data.goals)) {
+                goals = data.goals;
+                localStorage.setItem('miAhorroMetas', JSON.stringify(goals));
             }
+            
+            if (data.settings && typeof data.settings === 'object') {
+                settings = { ...settings, ...data.settings };
+                localStorage.setItem('miAhorroSettings', JSON.stringify(settings));
+                updateUILanguage();
+            }
+            
+            updateGoalsUI();
+            updateTotals();
+            
+            const t = translations[settings.language] || translations.es;
+            alert(t['import'] + ' completado exitosamente');
+        } catch (error) {
+            alert('Error al importar el archivo. Verifique que sea un archivo JSON válido.');
         }
-    }, 500);
-}
-
-function hideDeleteOption(goalId, event) {
-    if (event) event.stopPropagation();
-    
-    // Limpiar timeout
-    if (deleteTimeout) {
-        clearTimeout(deleteTimeout);
-        deleteTimeout = null;
-    }
-    
-    // Ocultar después de un breve delay
-    setTimeout(() => {
-        const goalCard = event.target.closest('.goal-card');
-        if (goalCard) {
-            goalCard.classList.remove('show-delete');
-        }
-    }, 100);
-}
-
-// Función para ocultar todas las opciones de eliminación
-function hideAllDeleteOptions() {
-    const goalCards = document.querySelectorAll('.goal-card');
-    goalCards.forEach(card => {
-        card.classList.remove('show-delete');
-    });
+    };
+    reader.readAsText(file);
 }
 
 // ===== INICIALIZACIÓN =====
@@ -917,15 +1195,356 @@ document.addEventListener('DOMContentLoaded', function() {
     updateTotals();
     updateUILanguage(); // Actualizar la interfaz con el idioma guardado
     
-    // Agregar evento para ocultar opciones de eliminación al tocar fuera
-    document.addEventListener('click', function(event) {
-        if (!event.target.closest('.goal-card')) {
-            hideAllDeleteOptions();
-        }
-    });
+    // Configurar formateo de números para todos los inputs de cantidad
+    setupNumberFormatting('goal-amount');
+    setupNumberFormatting('money-amount');
+    setupNumberFormatting('edit-goal-amount');
+    
+    // Configurar drag and drop después de cargar las metas
+    setupDragAndDrop();
+    
+    // Configurar botones de exportación e importación
+    document.getElementById('export-btn').addEventListener('click', exportData);
+    document.getElementById('import-btn').addEventListener('click', importData);
+    document.getElementById('import-file').addEventListener('change', handleFileImport);
     
     console.log('✅ Aplicación inicializada correctamente');
 });
+
+// Variables globales para drag and drop
+let draggedElement = null;
+let startY = 0;
+let currentY = 0;
+let initialIndex = -1;
+let isDragging = false;
+let touchTimeout = null;
+let dragStartTime = 0;
+let isLongPress = false;
+
+// Funciones para drag and drop con soporte táctil y mouse
+function setupDragAndDrop() {
+    const goalCards = document.querySelectorAll('.goal-card');
+    console.log('🔧 Configurando drag táctil y mouse para', goalCards.length, 'tarjetas');
+    
+    goalCards.forEach((card, index) => {
+        const dragHandle = card.querySelector('.drag-handle');
+        
+        if (!dragHandle) {
+            console.warn('❌ No drag-handle en tarjeta', index);
+            return;
+        }
+        
+        // Limpiar eventos anteriores
+        dragHandle.replaceWith(dragHandle.cloneNode(true));
+        const newHandle = card.querySelector('.drag-handle');
+        
+        // Eventos táctiles
+        newHandle.addEventListener('touchstart', function(e) {
+            startDragWithLongPress(e, card, 'touch');
+        }, { passive: false });
+        
+        // Eventos de mouse
+        newHandle.addEventListener('mousedown', function(e) {
+            startDragWithLongPress(e, card, 'mouse');
+        }, { passive: false });
+        
+        // Prevenir comportamientos por defecto
+        newHandle.addEventListener('click', function(e) {
+            if (isLongPress) {
+                e.preventDefault();
+                e.stopPropagation();
+            }
+        });
+        
+        newHandle.addEventListener('dragstart', function(e) {
+            e.preventDefault();
+        });
+    });
+}
+
+function startDragWithLongPress(e, card, inputType) {
+    e.preventDefault();
+    e.stopPropagation();
+    
+    const handle = card.querySelector('.drag-handle');
+    const currentIndex = parseInt(card.dataset.index);
+    
+    console.log('🎯 Iniciando long press para meta', currentIndex, 'tipo:', inputType);
+    
+    // Reset variables
+    isLongPress = false;
+    dragStartTime = Date.now();
+    
+    // Obtener posición inicial
+    const clientY = inputType === 'touch' ? e.touches[0].clientY : e.clientY;
+    startY = clientY;
+    currentY = clientY;
+    
+    // Feedback visual inmediato
+    handle.classList.add('pressing');
+    
+    // Timer para activar drag (300ms para mouse, 500ms para touch)
+    const longPressDelay = inputType === 'mouse' ? 300 : 500;
+    
+    touchTimeout = setTimeout(() => {
+        console.log('✅ Long press activado!');
+        isLongPress = true;
+        
+        // Cambiar estado visual
+        handle.classList.remove('pressing');
+        handle.classList.add('drag-active');
+        card.classList.add('dragging');
+        
+        // Vibración solo para touch
+        if (inputType === 'touch' && navigator.vibrate) {
+            navigator.vibrate(50);
+        }
+        
+        // Configurar variables de drag
+        draggedElement = card;
+        initialIndex = currentIndex;
+        isDragging = true;
+        
+        // Configurar eventos de movimiento según el tipo de input
+        if (inputType === 'touch') {
+            document.addEventListener('touchmove', handleMove, { passive: false });
+            document.addEventListener('touchend', finalizeDrag, { once: true });
+        } else {
+            document.addEventListener('mousemove', handleMove, { passive: false });
+            document.addEventListener('mouseup', finalizeDrag, { once: true });
+        }
+        
+    }, longPressDelay);
+    
+    // Función para cancelar el long press
+    function cancelLongPress() {
+        if (touchTimeout) {
+            clearTimeout(touchTimeout);
+            touchTimeout = null;
+        }
+        handle.classList.remove('pressing', 'drag-active');
+        card.classList.remove('dragging');
+        console.log('❌ Long press cancelado');
+    }
+    
+    // Eventos para cancelar el long press
+    if (inputType === 'touch') {
+        const cancelEvents = ['touchend', 'touchcancel', 'touchmove'];
+        cancelEvents.forEach(eventType => {
+            document.addEventListener(eventType, function cancelHandler(e) {
+                if (eventType === 'touchmove') {
+                    const moveY = e.touches[0].clientY;
+                    const distance = Math.abs(moveY - startY);
+                    if (distance > 10) { // Si se mueve más de 10px, cancelar
+                        cancelLongPress();
+                        cancelEvents.forEach(et => {
+                            document.removeEventListener(et, cancelHandler);
+                        });
+                    }
+                } else {
+                    if (!isDragging) {
+                        cancelLongPress();
+                    }
+                    cancelEvents.forEach(et => {
+                        document.removeEventListener(et, cancelHandler);
+                    });
+                }
+            }, { once: eventType !== 'touchmove' });
+        });
+    } else {
+        const cancelEvents = ['mouseup', 'mouseleave', 'mousemove'];
+        cancelEvents.forEach(eventType => {
+            document.addEventListener(eventType, function cancelHandler(e) {
+                if (eventType === 'mousemove') {
+                    const distance = Math.abs(e.clientY - startY);
+                    if (distance > 10) {
+                        cancelLongPress();
+                        cancelEvents.forEach(et => {
+                            document.removeEventListener(et, cancelHandler);
+                        });
+                    }
+                } else {
+                    if (!isDragging) {
+                        cancelLongPress();
+                    }
+                    cancelEvents.forEach(et => {
+                        document.removeEventListener(et, cancelHandler);
+                    });
+                }
+            }, { once: eventType !== 'mousemove' });
+        });
+    }
+}
+
+function handleMove(e) {
+    if (!isDragging || !draggedElement) return;
+    
+    e.preventDefault();
+    
+    // Obtener posición actual
+    const clientY = e.type.includes('touch') ? e.touches[0].clientY : e.clientY;
+    currentY = clientY;
+    
+    // Calcular desplazamiento con límite más suave
+    const deltaY = currentY - startY;
+    const limitedDelta = Math.max(-50, Math.min(50, deltaY * 0.3)); // Limitar a ±50px y reducir sensibilidad
+    
+    // Mover visualmente el elemento con transformación más sutil
+    draggedElement.style.transform = `translateY(${limitedDelta}px) scale(1.02)`;
+    draggedElement.style.zIndex = '1000';
+    
+    // Detectar elemento objetivo
+    const goalCards = Array.from(document.querySelectorAll('.goal-card'));
+    const draggedIndex = goalCards.indexOf(draggedElement);
+    
+    let targetCard = null;
+    let targetIndex = -1;
+    
+    // Buscar la tarjeta sobre la que estamos con zona más amplia
+    for (let i = 0; i < goalCards.length; i++) {
+        if (i === draggedIndex) continue;
+        
+        const card = goalCards[i];
+        const rect = card.getBoundingClientRect();
+        const cardCenter = rect.top + rect.height / 2;
+        const threshold = rect.height * 0.3; // 30% del alto de la tarjeta
+        
+        // Verificar si estamos en la zona de intercambio
+        if (Math.abs(clientY - cardCenter) < threshold) {
+            targetCard = card;
+            targetIndex = i;
+            break;
+        }
+    }
+    
+    // Si encontramos un objetivo válido, intercambiar
+    if (targetCard && targetIndex !== draggedIndex) {
+        console.log(`🔄 Intercambiando posición ${draggedIndex} con ${targetIndex}`);
+        
+        // Intercambiar en el array de goals
+        const temp = goals[draggedIndex];
+        goals[draggedIndex] = goals[targetIndex];
+        goals[targetIndex] = temp;
+        
+        // Actualizar UI manteniendo el estado de drag
+        updateGoalsUIKeepDrag(draggedElement.dataset.goalId);
+        
+        // Actualizar referencia del elemento arrastrado
+        draggedElement = document.querySelector(`[data-goal-id="${draggedElement.dataset.goalId}"]`);
+        
+        // Aplicar el estado visual nuevamente
+        draggedElement.style.transform = `translateY(${limitedDelta}px) scale(1.02)`;
+        draggedElement.style.zIndex = '1000';
+        draggedElement.classList.add('dragging');
+        
+        // Vibración de feedback más suave
+        if (e.type.includes('touch') && navigator.vibrate) {
+            navigator.vibrate(20);
+        }
+    }
+}
+
+function finalizeDrag(e) {
+    console.log('🏁 Finalizando drag');
+    
+    // Limpiar timeout si existe
+    if (touchTimeout) {
+        clearTimeout(touchTimeout);
+        touchTimeout = null;
+    }
+    
+    // Remover event listeners
+    document.removeEventListener('touchmove', handleMove);
+    document.removeEventListener('mousemove', handleMove);
+    document.removeEventListener('touchend', finalizeDrag);
+    document.removeEventListener('mouseup', finalizeDrag);
+    
+    if (draggedElement) {
+        // Restaurar estilos
+        draggedElement.style.transform = '';
+        draggedElement.style.zIndex = '';
+        
+        // Remover clases de estado
+        const handle = draggedElement.querySelector('.drag-handle');
+        if (handle) {
+            handle.classList.remove('pressing', 'drag-active');
+        }
+        draggedElement.classList.remove('dragging');
+        
+        // Vibración de confirmación (solo touch)
+        if (e.type.includes('touch') && navigator.vibrate) {
+            navigator.vibrate([30, 50, 30]);
+        }
+    }
+    
+    // Guardar cambios y actualizar UI
+    if (isDragging) {
+        saveToStorage();
+        updateGoalsUI();
+        console.log('✅ Cambios guardados');
+    }
+    
+    // Reset variables
+    draggedElement = null;
+    isDragging = false;
+    isLongPress = false;
+    startY = 0;
+    currentY = 0;
+    initialIndex = -1;
+}
+
+function updateGoalsUIKeepDrag(keepDragId) {
+    const container = document.getElementById('goals-container');
+    
+    // Guardar estado del elemento que se está arrastrando
+    let draggedElementState = null;
+    if (keepDragId) {
+        const draggedEl = document.querySelector(`[data-goal-id="${keepDragId}"]`);
+        if (draggedEl) {
+            draggedElementState = {
+                transform: draggedEl.style.transform,
+                zIndex: draggedEl.style.zIndex,
+                classes: Array.from(draggedEl.classList)
+            };
+        }
+    }
+    
+    // Actualizar UI normal
+    updateGoalsUI();
+    
+    // Restaurar estado del elemento arrastrado
+    if (keepDragId && draggedElementState) {
+        const newDraggedEl = document.querySelector(`[data-goal-id="${keepDragId}"]`);
+        if (newDraggedEl) {
+            newDraggedEl.style.transform = draggedElementState.transform;
+            newDraggedEl.style.zIndex = draggedElementState.zIndex;
+            newDraggedEl.className = draggedElementState.classes.join(' ');
+        }
+    }
+}
+
+function moveGoal(fromIndex, toIndex) {
+    if (toIndex < 0 || toIndex >= goals.length || fromIndex === toIndex) {
+        return;
+    }
+    
+    console.log(`🔄 Moviendo meta de posición ${fromIndex} a ${toIndex}`);
+    
+    // Mover en el array
+    const goal = goals.splice(fromIndex, 1)[0];
+    goals.splice(toIndex, 0, goal);
+    
+    // Vibración de confirmación
+    if (navigator.vibrate) {
+        navigator.vibrate([30, 50, 30]);
+    }
+    
+    // Guardar y actualizar
+    saveToStorage();
+    updateGoalsUI();
+    
+    console.log('✅ Meta movida exitosamente');
+}
 
 // Service Worker
 if ('serviceWorker' in navigator) {

@@ -58,7 +58,8 @@
                     <select id="language-select">
                         <option value="es">🇪🇸 Español</option>
                         <option value="en">🇺🇸 English</option>
-                        <option value="pt">🇧🇷 Português</option>
+                        <option value="pt">🇵🇹 Português</option>
+                        <option value="que">🇵🇪 Runasimi (Quechua)</option>
                     </select>
                 </div>
                 
@@ -74,6 +75,17 @@
                         <option value="CLP">🇨🇱 CLP - Peso Chileno</option>
                         <option value="PEN">🇵🇪 PEN - Sol Peruano</option>
                     </select>
+                </div>
+                
+                <div class="settings-section">
+                    <h4 data-translate="export">Exportar</h4>
+                    <button id="export-btn" class="export-import-btn" data-translate="export">Exportar</button>
+                </div>
+                
+                <div class="settings-section">
+                    <h4 data-translate="import">Importar</h4>
+                    <input type="file" id="import-file" accept=".json" style="display: none;">
+                    <button id="import-btn" class="export-import-btn" data-translate="import">Importar</button>
                 </div>
             </div>
             <div class="modal-footer">
